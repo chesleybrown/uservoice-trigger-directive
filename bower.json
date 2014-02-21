@@ -1,0 +1,10 @@
+{
+	"name": "uservoice-trigger-directive",
+	"version": "0.0.1",
+	"main": "randomclass-directive.js",
+	"ignore": [
+	],
+	"dependencies": {
+		"angular": ">=1.2.0"
+	}
+}
