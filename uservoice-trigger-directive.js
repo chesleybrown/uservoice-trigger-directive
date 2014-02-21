@@ -7,14 +7,22 @@ angular.module('uservoice-trigger-directive', [])
 		return {
 			restrict: 'A',
 			scope: {
-				mode: '@'
+				mode: '@',
+				position: '@'
 			},
 			link: function (scope, elem, attrs) {
 				elem.attr('id', 'feedback-uservoice-' + count.toString());
 				count = count + 1;
 				
+				if (!scope.position) {
+					scope.position = 'automatic';
+				}
+				if (!scope.mode) {
+					scope.mode = 'contact';
+				}
+				
 				if (UserVoice) {
-					UserVoice.push(['addTrigger', '#' + elem.attr('id'), {mode: scope.mode}]);
+					UserVoice.push(['addTrigger', '#' + elem.attr('id'), {mode: scope.mode, position: scope.position}]);
 				}
 			}
 		};
