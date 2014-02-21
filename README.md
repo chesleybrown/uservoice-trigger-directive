@@ -20,5 +20,5 @@ var myApp = angular.module('myApp', ['uservoice-trigger-directive']);
 Use the `uservoice-trigger` directive attribute on the element you want to trigger the UserVoice widget on click. You also have to set the `mode` attribute to one of `contact`, `smartvote` or `satisfaction` (see [UserVoice docs](https://developer.uservoice.com/docs/widgets/overview/) for more information on the widget options). Remember to have the `UserVoice` widget included already.
 
 ```html
-<a uservoice-trigger mode="contact">Contact</div>
+<a uservoice-trigger mode="contact">Contact</a>
 ```
