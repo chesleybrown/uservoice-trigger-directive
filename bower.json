@@ -1,6 +1,6 @@
 {
 	"name": "uservoice-trigger-directive",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "randomclass-directive.js",
 	"ignore": [
 	],

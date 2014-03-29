@@ -8,7 +8,8 @@ angular.module('uservoice-trigger-directive', [])
 			restrict: 'A',
 			scope: {
 				mode: '@',
-				position: '@'
+				position: '@',
+				identify: '='
 			},
 			link: function (scope, elem, attrs) {
 				elem.attr('id', 'feedback-uservoice-' + count.toString());
@@ -24,6 +25,14 @@ angular.module('uservoice-trigger-directive', [])
 				if (UserVoice) {
 					UserVoice.push(['addTrigger', '#' + elem.attr('id'), {mode: scope.mode, position: scope.position}]);
 				}
+				
+				var setIdentify = function() {
+					if (scope.identify) {
+						UserVoice.push(['identify', scope.identify]);
+					}
+				};
+				
+				scope.$watch('identify', setIdentify);
 			}
 		};
 	})
