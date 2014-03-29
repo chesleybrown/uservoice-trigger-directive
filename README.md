@@ -24,4 +24,5 @@ Use the `uservoice-trigger` directive attribute on the element you want to trigg
 ```html
 <a uservoice-trigger mode="contact">Contact</a>
 <a uservoice-trigger mode="smartvote" position="top">Vote</a>
+<a uservoice-trigger mode="smartvote" position="top" identify="identify">Vote</a>
 ```
