@@ -1,5 +1,9 @@
 uservoice-trigger-directive
 ===========================
+[![Build Status](https://travis-ci.org/chesleybrown/uservoice-trigger-directive.svg?branch=master)](https://travis-ci.org/chesleybrown/uservoice-trigger-directive)
+[![Dependency Status](https://david-dm.org/chesleybrown/uservoice-trigger-directive.svg)](https://david-dm.org/chesleybrown/uservoice-trigger-directive)
+[![devDependency Status](https://david-dm.org/chesleybrown/uservoice-trigger-directive/dev-status.svg)](https://david-dm.org/chesleybrown/uservoice-trigger-directive#info=devDependencies)
+[![NPM version](https://badge.fury.io/js/uservoice-trigger-directive.svg)](http://badge.fury.io/js/uservoice-trigger-directive)
 
 Simple directive to trigger a UserVoice widget. Requires UserVoice widget to be included.
 

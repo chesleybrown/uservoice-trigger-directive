@@ -1,7 +1,10 @@
 'use strict';
 
-angular.module('uservoice-trigger-directive', [])
-	.directive('uservoiceTrigger', function() {
+angular
+	.module('directive.uservoice-trigger', [
+		'service.uservoice'
+	])
+	.directive('uservoiceTrigger', function (UserVoice) {
 		var count = 0;
 		
 		return {
@@ -11,7 +14,7 @@ angular.module('uservoice-trigger-directive', [])
 				position: '@',
 				identify: '='
 			},
-			link: function (scope, elem, attrs) {
+			link: function (scope, elem) {
 				elem.attr('id', 'feedback-uservoice-' + count.toString());
 				count = count + 1;
 				
@@ -26,7 +29,7 @@ angular.module('uservoice-trigger-directive', [])
 					UserVoice.push(['addTrigger', '#' + elem.attr('id'), {mode: scope.mode, position: scope.position}]);
 				}
 				
-				var setIdentify = function() {
+				var setIdentify = function () {
 					if (scope.identify) {
 						UserVoice.push(['identify', scope.identify]);
 					}
