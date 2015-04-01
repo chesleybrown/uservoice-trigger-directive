@@ -1,6 +1,6 @@
 {
 	"name": "uservoice-trigger-directive",
-	"version": "0.1.3",
+	"version": "2.0.0",
 	"main": "uservoice-trigger-directive.js",
 	"ignore": [
 	],
