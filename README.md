@@ -15,12 +15,12 @@ bower install uservoice-trigger-directive
 
 #### Include the directive in your Angular module
 
-```
+```js
 var myApp = angular
-    .module('myApp', ['uservoice-trigger'])
-    .controller('MyCtrl', function (UserVoice) {
-        // Setup your UserVoice here, etc
-    })
+	.module('myApp', ['uservoice-trigger'])
+	.controller('MyCtrl', function (UserVoice) {
+		// Setup your UserVoice here, etc
+	})
 ;
 ```
 
