@@ -12,6 +12,13 @@ angular
 		/* jshint ignore:end */
 		// jscs:enable
 		
-		return $window.UserVoice;
+		// To avoid calling the incorrect instance of UserVoice, we use apply
+		// to explicitly pass the correct UserVoice instance and the given
+		// arguments on method call
+		return {
+			push: function () {
+				$window.UserVoice.push.apply($window.UserVoice, arguments);
+			}
+		};
 	})
 ;
