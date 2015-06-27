@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 				}
 			},
 			src: [
-				'*.js',
+				'src/**/*.js',
 				'Gruntfile.js',
 				'LICENSE',
 				'README.md'
