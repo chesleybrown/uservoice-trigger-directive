@@ -1,6 +1,6 @@
 {
 	"name": "uservoice-trigger-directive",
-	"version": "2.0.1",
+	"version": "3.0.0",
 	"description": "Simple directive to trigger a UserVoice popup. Requires UserVoice to be included.",
 	"scripts": {
 		"test": "grunt"
@@ -29,8 +29,6 @@
 		"load-grunt-tasks": "^3.1.0"
 	},
 	"files": [
-		"directive.uservoice-trigger.js",
-		"module.uservoice.js",
-		"service.uservoice.js"
+		"src"
 	]
 }

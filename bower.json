@@ -1,8 +1,12 @@
 {
 	"name": "uservoice-trigger-directive",
-	"version": "2.0.1",
+	"version": "3.0.0",
 	"main": "uservoice-trigger-directive.js",
 	"ignore": [
+		".gitignore",
+		".travis.yml",
+		"Gruntfile.js",
+		"package.json"
 	],
 	"dependencies": {
 		"angular": ">=1.2.0"
