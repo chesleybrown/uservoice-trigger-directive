@@ -1,7 +1,11 @@
 {
 	"name": "uservoice-trigger-directive",
 	"version": "3.0.1",
-	"main": "uservoice-trigger-directive.js",
+	"main": [
+		"src/directive.uservoice-trigger.js",
+		"src/module.uservoice.js",
+		"src/service.uservoice.js"
+	],
 	"ignore": [
 		".gitignore",
 		".travis.yml",
