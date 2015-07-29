@@ -13,11 +13,16 @@ Simple directive to trigger a UserVoice widget. It automatically loads the UserV
 bower install uservoice-trigger-directive
 ```
 
-#### Include the directive in your Angular module
+#### Include the directive in your Angular module and config it
 
 ```js
 var myApp = angular
 	.module('myApp', ['uservoice-trigger'])
+	.config(function ($userVoiceProvider) {
+		// this is the path to your unique customized widget code, this is
+		// required for the module to work.
+		$userVoiceProvider.defaults.src = '//widget.uservoice.com/7283example27291.js';
+	})
 	.controller('MyCtrl', function (UserVoice) {
 		// Setup your UserVoice here, etc
 	})
