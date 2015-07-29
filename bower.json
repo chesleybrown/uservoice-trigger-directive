@@ -1,6 +1,6 @@
 {
 	"name": "uservoice-trigger-directive",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"main": [
 		"src/directive.uservoice-trigger.js",
 		"src/module.uservoice.js",
