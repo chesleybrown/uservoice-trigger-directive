@@ -19,9 +19,10 @@ bower install uservoice-trigger-directive
 var myApp = angular
 	.module('myApp', ['uservoice-trigger'])
 	.config(function ($userVoiceProvider) {
-		// this is the path to your unique customized widget code, this is
-		// required for the module to work.
-		$userVoiceProvider.defaults.src = '//widget.uservoice.com/7283example27291.js';
+		// you must set this to your unique UserVoice Javascript API Key which
+		// can be found under your UserVoice -> Settings -> Widgets section on
+		// their site
+		$userVoiceProvider.defaults.key = 'rarAZzmdEeibkRTbaRROi'; // this is only an example api key
 	})
 	.controller('MyCtrl', function (UserVoice) {
 		// Setup your UserVoice here, etc
