@@ -22,7 +22,7 @@ var myApp = angular
 		// you must set this to your unique UserVoice Javascript API Key which
 		// can be found under your UserVoice -> Settings -> Widgets section on
 		// their site
-		$userVoiceProvider.defaults.key = '//widget.uservoice.com/7283example27291.js';
+		$userVoiceProvider.defaults.key = 'rarAZzmdEeibkRTbaRROi'; // this is only an example api key
 	})
 	.controller('MyCtrl', function (UserVoice) {
 		// Setup your UserVoice here, etc
