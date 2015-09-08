@@ -4,7 +4,7 @@ angular
 	.module('directive.uservoice-trigger', [
 		'service.uservoice'
 	])
-	.directive('uservoiceTrigger', function (UserVoice) {
+	.directive('uservoiceTrigger', [function (UserVoice) {
 		var count = 0;
 		
 		return {
@@ -38,5 +38,5 @@ angular
 				scope.$watch('identify', setIdentify);
 			}
 		};
-	})
+	}])
 ;
