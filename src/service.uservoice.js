@@ -2,7 +2,7 @@
 
 angular
 	.module('service.uservoice', [])
-	.provider('$userVoice', function () {
+	.provider('$userVoice', [function () {
 		var defaults = this.defaults = {
 			key: null
 		};
@@ -10,8 +10,8 @@ angular
 		this.$get = function () {
 			return {defaults: defaults};
 		};
-	})
-	.factory('UserVoice', function ($userVoice, $window) {
+	}])
+	.factory('UserVoice', ['$userVoice', '$window', function ($userVoice, $window) {
 		var options = $userVoice.defaults;
 		$window.UserVoice = $window.UserVoice || [];
 		
@@ -35,5 +35,5 @@ angular
 				$window.UserVoice.push.apply($window.UserVoice, arguments);
 			}
 		};
-	})
+	}])
 ;
