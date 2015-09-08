@@ -4,7 +4,7 @@ angular
 	.module('directive.uservoice-trigger', [
 		'service.uservoice'
 	])
-	.directive('uservoiceTrigger', [function (UserVoice) {
+	.directive('uservoiceTrigger', ['UserVoice', function (UserVoice) {
 		var count = 0;
 		
 		return {

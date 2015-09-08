@@ -11,7 +11,7 @@ angular
 			return {defaults: defaults};
 		};
 	}])
-	.factory('UserVoice', [function ($userVoice, $window) {
+	.factory('UserVoice', ['$userVoice', '$window', function ($userVoice, $window) {
 		var options = $userVoice.defaults;
 		$window.UserVoice = $window.UserVoice || [];
 		
