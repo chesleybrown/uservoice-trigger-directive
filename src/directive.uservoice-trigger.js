@@ -13,6 +13,12 @@ angular
 				identify: '='
 			},
 			link: function (scope, elem) {
+				// if we failed to initialize UserVoice for some reason, e.g.
+				// due to forgetting to configure its API key
+				if (!UserVoice) {
+					return;
+				}
+				
 				if (!scope.position) {
 					scope.position = 'automatic';
 				}
@@ -20,12 +26,10 @@ angular
 					scope.mode = 'contact';
 				}
 				
-				if (UserVoice) {
-					UserVoice.push(['addTrigger', elem[0], {
-						mode: scope.mode,
-						position: scope.position
-					}]);
-				}
+				UserVoice.push(['addTrigger', elem[0], {
+					mode: scope.mode,
+					position: scope.position
+				}]);
 				
 				var setIdentify = function () {
 					if (scope.identify) {
