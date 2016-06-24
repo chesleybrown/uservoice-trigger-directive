@@ -5,8 +5,6 @@ angular
 		'service.uservoice'
 	])
 	.directive('uservoiceTrigger', function (UserVoice) {
-		var count = 0;
-		
 		return {
 			restrict: 'A',
 			scope: {
@@ -15,9 +13,6 @@ angular
 				identify: '='
 			},
 			link: function (scope, elem) {
-				elem.attr('id', 'feedback-uservoice-' + count.toString());
-				count = count + 1;
-				
 				if (!scope.position) {
 					scope.position = 'automatic';
 				}
@@ -26,7 +21,10 @@ angular
 				}
 				
 				if (UserVoice) {
-					UserVoice.push(['addTrigger', '#' + elem.attr('id'), {mode: scope.mode, position: scope.position}]);
+					UserVoice.push(['addTrigger', elem[0], {
+						mode: scope.mode,
+						position: scope.position
+					}]);
 				}
 				
 				var setIdentify = function () {
