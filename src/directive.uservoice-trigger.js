@@ -30,6 +30,10 @@ angular
 					mode: scope.mode,
 					position: scope.position
 				}]);
+				scope.$on('$destroy', function () {
+					UserVoice.push(['hide']);
+					UserVoice.push(['removeTrigger', elem[0]]);
+				});
 				
 				var setIdentify = function () {
 					if (scope.identify) {
