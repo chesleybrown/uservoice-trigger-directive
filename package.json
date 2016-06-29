@@ -23,10 +23,10 @@
 	},
 	"homepage": "https://github.com/chesleybrown/uservoice-trigger-directive",
 	"devDependencies": {
-		"grunt": "^0.4.5",
-		"grunt-cli": "^0.1.13",
-		"grunt-tabs4life": "^1.0.6",
-		"load-grunt-tasks": "^3.1.0"
+		"grunt": "^1.0.1",
+		"grunt-cli": "^1.2.0",
+		"grunt-tabs4life": "^5.0.0",
+		"load-grunt-tasks": "^3.5.0"
 	},
 	"files": [
 		"src"
