@@ -5,8 +5,6 @@ angular
 		'service.uservoice'
 	])
 	.directive('uservoiceTrigger', function (UserVoice) {
-		var count = 0;
-		
 		return {
 			restrict: 'A',
 			scope: {
@@ -15,8 +13,11 @@ angular
 				identify: '='
 			},
 			link: function (scope, elem) {
-				elem.attr('id', 'feedback-uservoice-' + count.toString());
-				count = count + 1;
+				// if we failed to initialize UserVoice for some reason, e.g.
+				// due to forgetting to configure its API key
+				if (!UserVoice) {
+					return;
+				}
 				
 				if (!scope.position) {
 					scope.position = 'automatic';
@@ -25,9 +26,14 @@ angular
 					scope.mode = 'contact';
 				}
 				
-				if (UserVoice) {
-					UserVoice.push(['addTrigger', '#' + elem.attr('id'), {mode: scope.mode, position: scope.position}]);
-				}
+				UserVoice.push(['addTrigger', elem[0], {
+					mode: scope.mode,
+					position: scope.position
+				}]);
+				scope.$on('$destroy', function () {
+					UserVoice.push(['hide']);
+					UserVoice.push(['removeTrigger', elem[0]]);
+				});
 				
 				var setIdentify = function () {
 					if (scope.identify) {
