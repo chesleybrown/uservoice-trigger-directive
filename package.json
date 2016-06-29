@@ -1,34 +1,34 @@
 {
-	"name": "uservoice-trigger-directive",
-	"version": "5.0.0",
-	"description": "Simple directive to trigger a UserVoice popup.",
-	"scripts": {
-		"test": "grunt"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/chesleybrown/uservoice-trigger-directive.git"
-	},
-	"keywords": [
-		"UserVoice",
-		"Angular",
-		"AngularJS",
-		"directive",
-		"popup"
-	],
-	"author": "Chesley Brown <me@chesleybrown.ca> (http://chesleybrown.ca/)",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/chesleybrown/uservoice-trigger-directive/issues"
-	},
-	"homepage": "https://github.com/chesleybrown/uservoice-trigger-directive",
-	"devDependencies": {
-		"grunt": "^1.0.1",
-		"grunt-cli": "^1.2.0",
-		"grunt-tabs4life": "^5.0.0",
-		"load-grunt-tasks": "^3.5.0"
-	},
-	"files": [
-		"src"
-	]
+  "name": "uservoice-trigger-directive",
+  "version": "5.1.0",
+  "description": "Simple directive to trigger a UserVoice popup.",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chesleybrown/uservoice-trigger-directive.git"
+  },
+  "keywords": [
+    "UserVoice",
+    "Angular",
+    "AngularJS",
+    "directive",
+    "popup"
+  ],
+  "author": "Chesley Brown <me@chesleybrown.ca> (http://chesleybrown.ca/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chesleybrown/uservoice-trigger-directive/issues"
+  },
+  "homepage": "https://github.com/chesleybrown/uservoice-trigger-directive",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-tabs4life": "^5.0.0",
+    "load-grunt-tasks": "^3.5.0"
+  },
+  "files": [
+    "src"
+  ]
 }
