@@ -23,7 +23,7 @@ angular
 		// Inject UserVoice script into DOM
 		// jscs:disable
 		/* jshint ignore:start */
-		(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/' + options.key + '.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+		(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.ngSrc='//widget.uservoice.com/' + options.key + '.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 		/* jshint ignore:end */
 		// jscs:enable
 		
